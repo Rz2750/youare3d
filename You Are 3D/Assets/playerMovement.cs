@@ -49,11 +49,10 @@ public class playerMovement : MonoBehaviour
         transform.position = this.transform.position + velocity;
     }
 
-    void OnCollisionEnter(Collision col) {
-        xV = 0;
-        zV = 0;
-
-    }
+    // void OnCollisionEnter(Collision col) {
+    //     xV = 0;
+    //     zV = 0;
+    // }
 
     // void OnCollisionStay(Collision col) {
     //     xV = 0;
