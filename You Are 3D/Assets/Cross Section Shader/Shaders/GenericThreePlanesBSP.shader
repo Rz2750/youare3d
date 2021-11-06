@@ -13,7 +13,7 @@
 		_Plane3Position("Plane3Position",Vector) = (0,0,0,1)
 	}
 		SubShader{
-		Tags{ "RenderType" = "Transparent" }
+		Tags{ "RenderType" = "Opaque" }
 		//LOD 200
 		
 		Cull Back
@@ -47,7 +47,7 @@
 		float dotProd1 = dot(worldPos - _Plane1Position, _Plane1Normal);
 		float dotProd2 = dot(worldPos - _Plane2Position, _Plane2Normal);
 		float dotProd3 = dot(worldPos - _Plane3Position, _Plane3Normal);
-		return dotProd1 > 0 && dotProd2 > 0 && dotProd3 > 0;
+		return dotProd1 < 0 || dotProd2 < 0 || dotProd3 < 0;
 	}
 	void surf(Input IN, inout SurfaceOutputStandard o) {
 		if (checkVisability(IN.worldPos))discard;
@@ -83,7 +83,7 @@
 		float dotProd1 = dot(worldPos - _Plane1Position, _Plane1Normal);
 		float dotProd2 = dot(worldPos - _Plane2Position, _Plane2Normal);
 		float dotProd3 = dot(worldPos - _Plane3Position, _Plane3Normal);
-		return dotProd1 > 0 && dotProd2 > 0 && dotProd3 > 0;
+		return (dotProd1 < 0 || dotProd2 < 0) /*&& dotProd3 < 0*/;
 	}
 	fixed4 LightingNoLighting(SurfaceOutput s, fixed3 lightDir, fixed atten)
 	{
