@@ -70,7 +70,7 @@ public class MovePlayer : MonoBehaviour
         movementDirection.Normalize();
 
         ySpeed += Physics.gravity.y * Time.deltaTime;
-
+        
         if (characterController.isGrounded)
         {
             characterController.stepOffset = originalStepOffset;
