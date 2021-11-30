@@ -53,11 +53,15 @@ public class MovePlayer : MonoBehaviour
     private CharacterController characterController;
     private float ySpeed;
     private float originalStepOffset;
+    bool isMoving = false;
+    AudioSource audioSrc;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         originalStepOffset = characterController.stepOffset;
+        audioSrc = GetComponent<AudioSource>();
+
     }
 
     void Update()
@@ -90,6 +94,13 @@ public class MovePlayer : MonoBehaviour
         velocity.y = ySpeed;
 
         characterController.Move(velocity * Time.deltaTime);
+        if ((velocity.y != 0 && velocity.x !=0) || velocity.z!= 0)
+        {
+            isMoving = true;
+        } else
+        {
+            isMoving = false;
+        }
 
         if (movementDirection != Vector3.zero)
         {
@@ -97,5 +108,27 @@ public class MovePlayer : MonoBehaviour
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
+
+        if (isMoving)
+        {
+            if (!audioSrc.isPlaying)
+                audioSrc.Play();
+        } else
+            audioSrc.Stop();
     }
 }
+
+
+/*if (rb.velocity.x != 0)
+    isMoving = true;
+else
+    isMoving = false;
+
+if (isMoving)
+{
+    if (!audioSrc.isPlaying)
+        audioSrc.Play();
+}
+else
+    audioSrc.Stop();
+	}*/
