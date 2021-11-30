@@ -5,32 +5,34 @@ using UnityEngine.UI;
 
 public class CompassManager : MonoBehaviour
 {
-    public Vector3 North;
-    public Transform player;
-    public Quaternion direction;
-    public RectTransform northLayer;
-    public RectTransform missionLayer;
-     public Transform missionPlace;
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        public Transform playerTransform;
+        public Transform destTransform;
+        public RectTransform compass;
+        Vector3 dir;
     
-    public void changeNorth()
-    {
-            direction.z = player.eulerAngles.y;
-            northLayer.localEulerAngles = North;
-    }
-    
-    public void changeMission()
-    {
-            Vector3 dir = transform.position - missionPlace.position;
-            direction = Quaternion.LookRotation(dir);
-            direction.z = -direction.y;
-            direction.x = 0;
-            direction.y = 0;
+        private void Update()
+        {
+            Vector3 dir = playerTransform.position - destTransform.position;
+            dir.z = -dir.y;
+            transform.localEulerAngles = dir;
             
-            missionLayer.localRotation = direction * Quaternion.Euler(North);
-    }
+        }
+    // Update is called once per frame
+    // 
+    // public void changeNorth()
+    // {
+    //         direction.z = player.eulerAngles.y;
+    //         northLayer.localEulerAngles = North;
+    // }
+    // 
+    // public void changeMission()
+    // {
+    //         Vector3 dir = transform.position - missionPlace.position;
+    //         direction = Quaternion.LookRotation(dir);
+    //         direction.z = -direction.y;
+    //         direction.x = 0;
+    //         direction.y = 0;
+    // 
+    //         missionLayer.localRotation = direction * Quaternion.Euler(North);
+    // }
 }
