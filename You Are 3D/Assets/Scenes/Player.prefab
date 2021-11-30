@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7042968114036614777}
   - component: {fileID: 7042968114036614783}
   - component: {fileID: 1387421463955823813}
-  - component: {fileID: 9206224360806853895}
+  - component: {fileID: 3499633553549487761}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roll: {fileID: 8300000, guid: d24079ea8d3e84d4fb24a2f4a342786d, type: 3}
-  wall: {fileID: 8300000, guid: 943f61f9987b148b59c3d43dce2e64ec, type: 3}
+  wall: {fileID: 8300000, guid: a7b580a22d9fc46548df7fe468f17621, type: 3}
   speed: 5
   rotationSpeed: 720
   jumpSpeed: 10
@@ -248,7 +248,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &9206224360806853895
+--- !u!82 &3499633553549487761
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,7 +258,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d24079ea8d3e84d4fb24a2f4a342786d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a7b580a22d9fc46548df7fe468f17621, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
