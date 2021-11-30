@@ -8,15 +8,22 @@ public class CompassManager : MonoBehaviour
         public Transform playerTransform;
         public Transform destTransform;
         public RectTransform compass;
+        public GameObject glow;
         Vector3 dir;
-        Vector2 rotate;
     
         private void Update()
         {
-            Vector3 dir = playerTransform.position - destTransform.position;
-            rotate.x = dir.x;
-            rotate.y = -dir.z;
+            Vector3 dir = destTransform.position - playerTransform.position;
             compass.localEulerAngles = dir;
+            glow.SetActive(false);
+            isClose(dir);
             
         }
+        
+        private void isClose(Vector3 dir){
+                if(dir.x < 0.5 && dir.y < 0.5 && dir.z < 0.5){
+                        glow.SetActive(true);
+                }
+        }
+        
 }
