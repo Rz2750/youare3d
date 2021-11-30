@@ -46,6 +46,10 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
+    public AudioClip roll;
+    public AudioClip wall;
+
+
     public float speed;
     public float rotationSpeed;
     public float jumpSpeed;
@@ -54,13 +58,19 @@ public class MovePlayer : MonoBehaviour
     private float ySpeed;
     private float originalStepOffset;
     bool isMoving = false;
-    AudioSource audioSrc;
+    bool colliding = false;
+
+    AudioSource ballAudio;
+    //public AudioSource wallcollisionaudio;
+    Collision collision;
+
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         originalStepOffset = characterController.stepOffset;
-        audioSrc = GetComponent<AudioSource>();
+        ballAudio = GetComponent<AudioSource>();
+        //wallcollisionaudio = GetComponent<AudioSource>();
 
     }
 
@@ -74,7 +84,7 @@ public class MovePlayer : MonoBehaviour
         movementDirection.Normalize();
 
         ySpeed += Physics.gravity.y * Time.deltaTime;
-        
+
         if (characterController.isGrounded)
         {
             characterController.stepOffset = originalStepOffset;
@@ -94,13 +104,18 @@ public class MovePlayer : MonoBehaviour
         velocity.y = ySpeed;
 
         characterController.Move(velocity * Time.deltaTime);
-        if ((velocity.y != 0 && velocity.x !=0) || velocity.z!= 0)
+        
+        if ((velocity.y != 0 && velocity.x != 0) || velocity.z != 0)
         {
             isMoving = true;
-        } else
+            colliding = false;
+
+        }
+        else
         {
             isMoving = false;
         }
+        
 
         if (movementDirection != Vector3.zero)
         {
@@ -111,12 +126,41 @@ public class MovePlayer : MonoBehaviour
 
         if (isMoving)
         {
-            if (!audioSrc.isPlaying)
-                audioSrc.Play();
-        } else
-            audioSrc.Stop();
+            if (!ballAudio.isPlaying)
+                ballAudio.PlayOneShot(roll, 0.7F);
+        }
+        else
+        {
+            ballAudio.Pause();
+
+        }
+
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag!= "ground")
+        {
+            ballAudio.PlayOneShot(wall, 0.3F);
+            isMoving = false;
+            Debug.Log("here");
+
+        } else
+
+        { if (!isMoving)
+            {
+                ballAudio.Pause();
+
+            }
+        }
+
+
+    }
+
+
+
 }
+
 
 
 /*if (rb.velocity.x != 0)
@@ -126,9 +170,9 @@ else
 
 if (isMoving)
 {
-    if (!audioSrc.isPlaying)
-        audioSrc.Play();
+    if (!rollingaudio.isPlaying)
+        rollingaudio.Play();
 }
 else
-    audioSrc.Stop();
+    rollingaudio.Stop();
 	}*/
