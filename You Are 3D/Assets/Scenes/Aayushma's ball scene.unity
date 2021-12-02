@@ -475,6 +475,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7042968114036614662, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
   m_PrefabInstance: {fileID: 7042968113723847995}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &526881598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526881597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85aec9e06615a8b4089bcaaf55cc634c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  sprintMultiplier: 1.5
 --- !u!114 &526881605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,6 +501,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27104de05176946579f355502153f572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &526881609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526881597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721bb144f0ce54d4aa52cdad5febea8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 7
+  groundChecker: {fileID: 1391090299}
+  checkRadius: 0.5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1276115283
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +709,7 @@ Transform:
   m_GameObject: {fileID: 1391090295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.4, y: -3.3, z: 0}
-  m_LocalScale: {x: 7, y: 10, z: 6}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -785,9 +817,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1387421463955823813, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
+      propertyPath: Pan2D
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042968114036614660, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b6bedf6e55cb54779baf11132b3825de, type: 2}
     - target: {fileID: 7042968114036614662, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042968114036614776, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
+      propertyPath: m_Constraints
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042968114036614777, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7042968114036614777, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: rollingaudio
