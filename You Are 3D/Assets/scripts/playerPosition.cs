@@ -8,8 +8,12 @@ public class playerPosition : MonoBehaviour
         private float xpos;
         private float ypos;
         private float zpos;
+        private float xdiff;
+        private float ydiff;
+        private float zdiff;
         public Text playerpositions;
         public GameObject player;
+        public GameObject exit;
         
     // void Start()
     // {
@@ -25,6 +29,11 @@ public class playerPosition : MonoBehaviour
         xpos = player.transform.position.x;
         ypos = player.transform.position.y;
         zpos = player.transform.position.z;
-        playerpositions.text = "x: " + xpos.ToString("#.00") + "y: " + ypos.ToString("#.00") + "z: " + zpos.ToString("#.00");
+        
+        xdiff = exit.transform.position.x - player.transform.position.x;
+        ydiff = exit.transform.position.y - player.transform.position.y;
+        zdiff = exit.transform.position.z - player.transform.position.z;
+        
+        playerpositions.text = "x: " + xpos.ToString("#.00") + " y: " + ypos.ToString("#.00") + " z: " + zpos.ToString("#.00") + "\nx: " + xdiff.ToString("#.00") + " y: " + ydiff.ToString("#.00") + " z: " + zdiff.ToString("#.00");
     }
 }
