@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/sampleMaze.unity
     guid: c4ff21b598e124796a15c91dd673d812
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/prefabs/PauseMenu.unity
     guid: 9e3a71c79036e4bf6a99de70595eb1ca
   - enabled: 1
