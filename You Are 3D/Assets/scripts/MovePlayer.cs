@@ -59,6 +59,7 @@ public class MovePlayer : MonoBehaviour
     private float originalStepOffset;
     bool isMoving = false;
     bool colliding = false;
+    bool hasKey = false;
 
     AudioSource ballAudio;
     //public AudioSource wallcollisionaudio;
@@ -139,7 +140,15 @@ public class MovePlayer : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag!= "ground")
+        if (collision.gameObject.tag == "key") {
+            hasKey = true;
+            Destroy (collision.gameObject);
+        }
+        // else if ((collision.gameObject.tag == "Door") and (hasKey == true)) {
+        //     hasKey = false;
+        //     collision.gameObject.transform.position = new Vector3(0,-5,0);
+        // }
+        else if(collision.gameObject.tag!= "ground")
         {
             ballAudio.PlayOneShot(wall, 0.3F);
             isMoving = false;
@@ -157,10 +166,7 @@ public class MovePlayer : MonoBehaviour
 
     }
 
-
-
 }
-
 
 
 /*if (rb.velocity.x != 0)
