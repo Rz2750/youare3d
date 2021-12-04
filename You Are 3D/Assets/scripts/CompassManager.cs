@@ -21,7 +21,7 @@ public class CompassManager : MonoBehaviour
         }
         
         private void isClose(Vector3 dir){
-                if(dir.x < 0.5 && dir.y < 0.5 && dir.z < 0.5){
+                if(dir.x < 0.1f && dir.y < 0.1f && dir.z < 0.1f){
                         glow.SetActive(true);
                 }
         }
