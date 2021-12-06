@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShaderScriptTest : MonoBehaviour
+public class CrossSectionScript : MonoBehaviour
 {
     public Material crossMaterial;
     // public Transform mainCamera;

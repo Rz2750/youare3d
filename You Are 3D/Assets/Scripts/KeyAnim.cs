@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class keyAnimation : MonoBehaviour
+public class KeyAnim : MonoBehaviour
 {
     float originalY;
 

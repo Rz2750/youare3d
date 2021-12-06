@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
-// Quits the player when the user hits escape
+// Quits the game when the user hits escape
 
-public class EscapeFunction : MonoBehaviour
+public class QuitGameScript : MonoBehaviour
 {
     void Update()
     {

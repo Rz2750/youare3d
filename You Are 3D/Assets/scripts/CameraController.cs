@@ -21,14 +21,14 @@ public class CameraController : MonoBehaviour
         transform.position = player.transform.position + offset;
 
         // Spin the object around the target at rotateSpeed degrees/second.
-        if (Input.GetKey("q"))
-        {
-            transform.RotateAround(player.transform.position, Vector3.up, (rotateSpeed) * Time.deltaTime);
-        }
-        if (Input.GetKey("e"))
-        {
-            transform.RotateAround(player.transform.position, Vector3.up, (-rotateSpeed) * Time.deltaTime);
-        }
+        // if (Input.GetKey("q"))
+        // {
+        //     transform.RotateAround(player.transform.position, Vector3.up, (rotateSpeed) * Time.deltaTime);
+        // }
+        // if (Input.GetKey("e"))
+        // {
+        //     transform.RotateAround(player.transform.position, Vector3.up, (-rotateSpeed) * Time.deltaTime);
+        // }
 
         offset = transform.position - player.transform.position;
 
