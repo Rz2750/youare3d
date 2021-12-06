@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 2e6840ef2b8d5fe4bab60930365a3b89, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
-  mainCamera: {fileID: 0}
+  playerpos: {fileID: 0}
 --- !u!1 &175001192
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
-  mainCamera: {fileID: 0}
+  playerpos: {fileID: 0}
 --- !u!65 &271946209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -825,6 +825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerpositions: {fileID: 1050095108}
   player: {fileID: 1026332078}
+  exit: {fileID: 0}
 --- !u!4 &482392570
 Transform:
   m_ObjectHideFlags: 0
@@ -949,7 +950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
-  mainCamera: {fileID: 0}
+  playerpos: {fileID: 0}
 --- !u!1 &489397035
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,7 +984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
-  mainCamera: {fileID: 0}
+  playerpos: {fileID: 0}
 --- !u!65 &489397037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1094,7 +1095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
-  mainCamera: {fileID: 0}
+  playerpos: {fileID: 0}
 --- !u!65 &549441495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1375,7 +1376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
-  mainCamera: {fileID: 0}
+  playerpos: {fileID: 0}
 --- !u!1 &977278151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,7 +1737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
-  mainCamera: {fileID: 0}
+  playerpos: {fileID: 0}
 --- !u!65 &1078649222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1913,7 +1914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
-  mainCamera: {fileID: 0}
+  playerpos: {fileID: 0}
 --- !u!65 &1172953539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2024,7 +2025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
-  mainCamera: {fileID: 0}
+  playerpos: {fileID: 0}
 --- !u!65 &1215584916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2135,7 +2136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
-  mainCamera: {fileID: 0}
+  playerpos: {fileID: 0}
 --- !u!65 &1325502410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2364,7 +2365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
-  mainCamera: {fileID: 0}
+  playerpos: {fileID: 0}
 --- !u!65 &1454511822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2520,7 +2521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
-  mainCamera: {fileID: 0}
+  playerpos: {fileID: 0}
 --- !u!65 &1550891354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3065,7 +3066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
-  mainCamera: {fileID: 0}
+  playerpos: {fileID: 0}
 --- !u!65 &2135218924
 BoxCollider:
   m_ObjectHideFlags: 0

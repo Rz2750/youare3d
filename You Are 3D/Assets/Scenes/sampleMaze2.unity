@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 263194980}
-  m_IndirectSpecularColor: {r: 0.6587384, g: 0.59618247, b: 0.64357996, a: 1}
+  m_IndirectSpecularColor: {r: 0.65876734, g: 0.5961824, b: 0.64352965, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 8adea09c013d4ca4d9113fdd66010de0, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 48d6988af0fa6d143a8e44b9d13bfc17, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
-  mainCamera: {fileID: 0}
+  playerpos: {fileID: 0}
 --- !u!1001 &709863302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -610,6 +610,7 @@ MonoBehaviour:
   playerTransform: {fileID: 243249515}
   destTransform: {fileID: 2015337833}
   compass: {fileID: 950102763}
+  glow: {fileID: 0}
 --- !u!1 &950102762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,6 +1202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerpositions: {fileID: 1326442536}
   player: {fileID: 243249514}
+  exit: {fileID: 0}
 --- !u!4 &1758886510
 Transform:
   m_ObjectHideFlags: 0
