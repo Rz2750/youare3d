@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Micah's test scene.unity
     guid: 6c403b1b048c8ae41990375fa3d9f2dd
+  - enabled: 1
+    path: Assets/Scenes/MainGame/Level 0.unity
+    guid: f025a2fb032c4dc4ca260b2eaffffc2b
   m_configObjects: {}
