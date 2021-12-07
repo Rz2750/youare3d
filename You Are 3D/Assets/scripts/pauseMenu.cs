@@ -144,14 +144,12 @@ public class pauseMenu : MonoBehaviour
         GameisPaused = false;
     }
 
-    public void Restart()
+    public void Quit()
     {
-        GameisPaused = false;
-
-        Time.timeScale = 1f;
-        //restart the game:
-        //SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene("SampleMaze");
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        Application.Quit();
     }
 
     public void Menu()

@@ -120,7 +120,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5219874711385129899}
         m_TargetAssemblyTypeName: pauseMenu, Assembly-CSharp
         m_MethodName: Menu
         m_Mode: 1
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 5219874711451593234}
   - component: {fileID: 5219874711451593233}
   m_Layer: 5
-  m_Name: Reset
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e8a6aec9829149728ec13210876a18f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a30d70098ef834c4f95196e9d359d624, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -367,9 +367,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5219874711385129899}
         m_TargetAssemblyTypeName: pauseMenu, Assembly-CSharp
-        m_MethodName: Restart
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -617,7 +617,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5219874711385129899}
         m_TargetAssemblyTypeName: pauseMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
