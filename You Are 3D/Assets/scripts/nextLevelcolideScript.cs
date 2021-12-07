@@ -7,6 +7,10 @@ public class nextLevelcolideScript : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene("Micah's test scene"); //change to title of next scene to link
+        if (scene.name == "Level 0") {
+            SceneManager.LoadScene("Level 1");
+        } else {
+            SceneManager.LoadScene("Micah's test scene"); //change to title of next scene to link
+        }
     }
 }
