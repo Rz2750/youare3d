@@ -17,6 +17,8 @@ public class nextLevelcolideScript : MonoBehaviour
     {
         if (scene.name == "Level 0") {
             SceneManager.LoadScene("Level 1");
+        } else if (scene.name == "Level 1") {
+            SceneManager.LoadScene("Level 2");
         } else {
             SceneManager.LoadScene("Micah's test scene"); //change to title of next scene to link
         }
