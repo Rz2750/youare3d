@@ -3,8 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
 public class nextLevelcolideScript : MonoBehaviour
 {
+    private Scene scene;
+    void Start()
+    {
+        scene = SceneManager.GetActiveScene();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (scene.name == "Level 0") {
