@@ -215,7 +215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325066522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5000014, y: 1.4, z: -7.75}
+  m_LocalPosition: {x: -5.8000016, y: 1.5, z: -7.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -272,7 +272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812336180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.83, y: 1.21, z: 2.7}
+  m_LocalPosition: {x: 60.9, y: 1.21, z: 13.1}
   m_LocalScale: {x: 2, y: 7, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -607,7 +607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2f447c726a55dfe4b884d7d6de600b87, type: 3}
       propertyPath: m_LocalScale.z
-      value: 37.5
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2f447c726a55dfe4b884d7d6de600b87, type: 3}
       propertyPath: m_LocalPosition.x
@@ -729,15 +729,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7042968114036614778, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.5
+      value: -5.8
       objectReference: {fileID: 0}
     - target: {fileID: 7042968114036614778, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7042968114036614778, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7042968114036614778, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -801,7 +801,7 @@ PrefabInstance:
     - target: {fileID: 510952178589090306, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
       propertyPath: destTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 812336183}
     - target: {fileID: 510952178589090306, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
       propertyPath: playerTransform
       value: 
