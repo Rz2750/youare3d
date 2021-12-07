@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class sceneManager : MonoBehaviour
 {
         public void OnButtonPress(){
-            SceneManager.LoadScene("sampleMaze"); //change to title of next scene to link
+            SceneManager.LoadScene("Level 0"); //change to title of next scene to link
         }
         
         public void OnRestartPress(){
