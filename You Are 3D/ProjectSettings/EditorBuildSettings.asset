@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TITLESCREEN.unity
+    path: Assets/Scenes/MainGame/TITLESCREEN.unity
     guid: 6e91d0c82be4d4fd4b3d407173e0caa9
   - enabled: 1
     path: Assets/Scenes/sampleMaze.unity
