@@ -457,7 +457,7 @@ PrefabInstance:
     - target: {fileID: 7042968114036614660, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e9ffc83dbd56b1b45be5c2d431434c28, type: 2}
+      objectReference: {fileID: 2100000, guid: 8886be18e299745b7aa7389c01a36502, type: 2}
     - target: {fileID: 7042968114036614662, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1017,15 +1017,3 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7042968114036614662, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
   m_PrefabInstance: {fileID: 914997693}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2146834829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146834828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27104de05176946579f355502153f572, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

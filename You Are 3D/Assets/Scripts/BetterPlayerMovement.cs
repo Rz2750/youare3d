@@ -11,8 +11,9 @@ public class BetterPlayerMovement : MonoBehaviour {
     public float JUMP_POWER;
     public float FRICTION;
     public float GRAVITY;
+    public bool DEBUG_MODE;
     
-    private bool grounded = false;
+    private int grounded = 5;
     private float y_prev = 0.0f;
     private float y_curr = 0.0f;
     
@@ -28,17 +29,7 @@ public class BetterPlayerMovement : MonoBehaviour {
     }
     
     // FixedUpdate is called once per phsyics engine update
-    void FixedUpdate() {
-        // PLAN:
-        // holding any movement key increases velocity in that direction by +2 per FixedUpdate (+100 per sec)
-        // velocity caps at 100 units in any direction (pythag. theorem used to calculate this)
-        // if velocity is over cap, both x_vel and z_vel decrease proportionally until below 100
-        
-        // if neither W/S is pressed, z_vel trends towards 0 by 4 per FixedUpdate
-        // if neither A/D is pressed, x_vel trends towards 0 by 4 per FixedUpdate
-        
-        // if holding a movement key while player is moving in the opposite direction, velocity changes by 6 instead of 2 until reversal completes
-        
+    void FixedUpdate() {        
         Rigidbody rb = this.GetComponent<Rigidbody>();
         
         bool moveFwd = (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow));
@@ -58,35 +49,37 @@ public class BetterPlayerMovement : MonoBehaviour {
             rb.AddForce(new Vector3(-PLAYER_SPD, 0, 0));
         
         // ********** DRAG ********** //
-        Debug.Log("VELOCITY: " + rb.velocity.x + ", " + rb.velocity.z);
+        if (DEBUG_MODE) Debug.Log("VELOCITY: " + rb.velocity.x + ", " + rb.velocity.z);
         float x_drag = -FRICTION*PLAYER_SPD*rb.velocity.x;
         float z_drag = -FRICTION*PLAYER_SPD*rb.velocity.z;
-        Debug.Log("DRAG: " + x_drag + ", " + z_drag);
+        if (DEBUG_MODE) Debug.Log("DRAG: " + x_drag + ", " + z_drag);
         if (!(moveFwd ^ moveBack))
             rb.AddForce(new Vector3(0, 0, z_drag));
         if (!(moveLeft ^ moveRight))
             rb.AddForce(new Vector3(x_drag, 0, 0));
         
         // ********** JUMPING ********** //
-        // "grounded": whether or not you've touched the ground since your last jump.
-        // can only jump if grounded.
+        // "grounded": how long until you can jump next.
+        // requires your y-position to stay stable for 5 frames before you can jump again.
         
         y_prev = y_curr;
         y_curr = this.transform.position.y;
         
-        if (grounded) {
+        if (grounded == 0) {
             if (moveJump) {
                 rb.AddForce(new Vector3(0, JUMP_POWER, 0), ForceMode.Impulse);
-                grounded = false;
+                grounded = 5;
             }
             else if (y_prev - y_curr > 0.5)
-                grounded = false;
+                grounded = 5;
         }
         
-        if (!grounded) {
+        if (grounded != 0) {
             rb.AddForce(new Vector3(0, -GRAVITY, 0));
-            if (y_prev == y_curr)
-                grounded = true;
+            if (Math.Abs(y_prev - y_curr) <= 0.0001 && grounded > 0) {
+                grounded--;
+            }
         }
+        if (DEBUG_MODE) Debug.Log("FRAMES UNTIL GROUNDED: " + grounded + "; y_curr = " + y_curr + ", y_prev = " + y_prev);
     }
 }
