@@ -302,8 +302,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PLAYER_SPD: 25
-  JUMP_POWER: 5
+  JUMP_POWER: 8
   FRICTION: 0.5
+  GRAVITY: 20
 --- !u!1 &263194979
 GameObject:
   m_ObjectHideFlags: 0
