@@ -203,14 +203,14 @@ PrefabInstance:
     - target: {fileID: 7042968114036614660, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e9ffc83dbd56b1b45be5c2d431434c28, type: 2}
+      objectReference: {fileID: 2100000, guid: 8886be18e299745b7aa7389c01a36502, type: 2}
     - target: {fileID: 7042968114036614662, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7042968114036614776, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: m_Drag
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7042968114036614777, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: jumpSpeed
@@ -301,8 +301,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 641c7f8fb5035a14eb889ee6ff4a9e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x_vel: 0
-  z_vel: 0
+  SPEED_CAP: 100
+  JUMP_POWER: 5
 --- !u!1 &263194979
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +517,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 0}
   playerpos: {fileID: 0}
+--- !u!64 &632090628
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632090623}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 672400964531903514, guid: a5c27db18cc1b674b9da652eaabcd4f5, type: 3}
 --- !u!1001 &709863302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -530,11 +544,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a5c27db18cc1b674b9da652eaabcd4f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.94
+      value: 12.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a5c27db18cc1b674b9da652eaabcd4f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.49
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a5c27db18cc1b674b9da652eaabcd4f5, type: 3}
       propertyPath: m_LocalPosition.z

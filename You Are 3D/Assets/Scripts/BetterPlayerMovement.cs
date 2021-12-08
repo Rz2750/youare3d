@@ -8,12 +8,12 @@ using System;
 public class BetterPlayerMovement : MonoBehaviour {
     
     public float SPEED_CAP = 100.0f;
-    public float JUMP_POWER = 50000.0f;
+    public float JUMP_POWER = 20.0f;
     
     private float x_vel = 0.0f;
     private float z_vel = 0.0f;
     
-    private int grounded = 10;
+    private bool grounded = false;
     private float y_prev = 0.0f;
     private float y_curr = 0.0f;
     
@@ -57,15 +57,10 @@ public class BetterPlayerMovement : MonoBehaviour {
         }
         if (!(Input.GetKey(KeyCode.W) ^ Input.GetKey(KeyCode.S))) {
             // Debug.Log("NO Z MOVEMENT");
-            if (z_vel < 5 && z_vel > -5) {
+            if (z_vel < 1 && z_vel > -1)
                 z_vel = 0.0f;
-            }
-            else if (z_vel >= 5) {
-                z_vel -= 4;
-            }
-            else if (z_vel <= -5) {
-                z_vel += 4;
-            }
+            else
+                z_vel *= 0.5f;
         }
         
         // ********** X-AXIS MOVEMENT ********** //
@@ -85,15 +80,10 @@ public class BetterPlayerMovement : MonoBehaviour {
         }
         if (!(Input.GetKey(KeyCode.D) ^ Input.GetKey(KeyCode.A))) {
             // Debug.Log("NO X MOVEMENT");
-            if (x_vel < 5 && x_vel > -5) {
+            if (x_vel < 1 && x_vel > 1)
                 x_vel = 0.0f;
-            }
-            else if (x_vel >= 5) {
-                x_vel -= 4;
-            }
-            else if (x_vel <= -5) {
-                x_vel += 4;
-            }
+            else
+                x_vel *= 0.5f;
         }
         
         // ********** VELOCITY CAP ********** //
@@ -108,27 +98,22 @@ public class BetterPlayerMovement : MonoBehaviour {
         this.GetComponent<Rigidbody>().AddForce(new Vector3(x_vel, 0, z_vel));
         
         // ********** JUMPING ********** //
-        // "grounded": how many frames you need to be touching the ground for before you can jump again
-        // gets set to 10 (= 0.2s) whenever you jump.
+        // "grounded": whether or not you've touched the ground since your last jump.
+        // can only jump if grounded.
         
         y_prev = y_curr;
         y_curr = this.transform.position.y;
         
-        if (Input.GetKeyDown(KeyCode.Space) && grounded == 0) {
+        if (Input.GetKey(KeyCode.Space) && grounded) {
             Debug.Log("SPACE PRESSED");
             this.GetComponent<Rigidbody>().AddForce(new Vector3(0, JUMP_POWER, 0), ForceMode.Impulse);
-            grounded = 10;
+            grounded = false;
         }
         
-        if (grounded > 0) {
-            if ((y_prev == y_curr) && grounded > 0)
-                grounded--;
-            else
-                grounded = 10;
-        }
-        else if (grounded == 0) {
-            if (y_prev - y_curr > 0.5)
-                grounded = 10;
+        if ((y_prev == y_curr) && !grounded) 
+            grounded = true;
+        else if ((y_prev - y_curr > 0.5) && grounded) {
+            grounded = false;
         }
     }
 }
