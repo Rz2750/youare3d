@@ -7,11 +7,10 @@ using System;
 
 public class BetterPlayerMovement : MonoBehaviour {
     
-    public float SPEED_CAP = 100.0f;
-    public float JUMP_POWER = 20.0f;
-    
-    private float x_vel = 0.0f;
-    private float z_vel = 0.0f;
+    public float PLAYER_SPD;
+    public float JUMP_POWER;
+    public float FRICTION;
+    public float GRAVITY;
     
     private bool grounded = false;
     private float y_prev = 0.0f;
@@ -40,62 +39,33 @@ public class BetterPlayerMovement : MonoBehaviour {
         
         // if holding a movement key while player is moving in the opposite direction, velocity changes by 6 instead of 2 until reversal completes
         
-        // ********** Z-AXIS MOVEMENT ********** //
-        if (Input.GetKey(KeyCode.W)) {
-            // Debug.Log("W PRESSED");
-            if (z_vel >= 0)
-                z_vel += 2;
-            else
-                z_vel += 6;
-        }
-        if (Input.GetKey(KeyCode.S)) {
-            // Debug.Log("S PRESSED");
-            if (z_vel <= 0)
-                z_vel -= 2;
-            else
-                z_vel -= 6;
-        }
-        if (!(Input.GetKey(KeyCode.W) ^ Input.GetKey(KeyCode.S))) {
-            // Debug.Log("NO Z MOVEMENT");
-            if (z_vel < 1 && z_vel > -1)
-                z_vel = 0.0f;
-            else
-                z_vel *= 0.5f;
-        }
+        Rigidbody rb = this.GetComponent<Rigidbody>();
         
-        // ********** X-AXIS MOVEMENT ********** //
-        if (Input.GetKey(KeyCode.D)) {
-            // Debug.Log("D PRESSED");
-            if (x_vel >= 0)
-                x_vel += 2;
-            else
-                x_vel += 6;
-        }
-        if (Input.GetKey(KeyCode.A)) {
-            // Debug.Log("A PRESSED");
-            if (x_vel <= 0)
-                x_vel -= 2;
-            else
-                x_vel -= 6;
-        }
-        if (!(Input.GetKey(KeyCode.D) ^ Input.GetKey(KeyCode.A))) {
-            // Debug.Log("NO X MOVEMENT");
-            if (x_vel < 1 && x_vel > 1)
-                x_vel = 0.0f;
-            else
-                x_vel *= 0.5f;
-        }
+        bool moveFwd = (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow));
+        bool moveBack = (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow));
+        bool moveLeft = (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow));
+        bool moveRight = (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow));
+        bool moveJump = (Input.GetKey(KeyCode.Space));
         
-        // ********** VELOCITY CAP ********** //
+        // ********** MOVEMENT ********** //
+        if (moveFwd)
+            rb.AddForce(new Vector3(0, 0, PLAYER_SPD));
+        if (moveBack)
+            rb.AddForce(new Vector3(0, 0, -PLAYER_SPD));
+        if (moveRight)
+            rb.AddForce(new Vector3(PLAYER_SPD, 0, 0));
+        if (moveLeft)
+            rb.AddForce(new Vector3(-PLAYER_SPD, 0, 0));
         
-        float total_vel = (float) Math.Sqrt(Math.Pow(x_vel, 2) + Math.Pow(z_vel, 2));
-        if (total_vel > SPEED_CAP) {
-            x_vel = (x_vel/total_vel)*100.0f;
-            z_vel = (z_vel/total_vel)*100.0f;
-        }
-        
-        // Debug.Log("TARGET VELOCITY: " + x_vel + ", " + z_vel);
-        this.GetComponent<Rigidbody>().AddForce(new Vector3(x_vel, 0, z_vel));
+        // ********** DRAG ********** //
+        Debug.Log("VELOCITY: " + rb.velocity.x + ", " + rb.velocity.z);
+        float x_drag = -FRICTION*PLAYER_SPD*rb.velocity.x;
+        float z_drag = -FRICTION*PLAYER_SPD*rb.velocity.z;
+        Debug.Log("DRAG: " + x_drag + ", " + z_drag);
+        if (!(moveFwd ^ moveBack))
+            rb.AddForce(new Vector3(0, 0, z_drag));
+        if (!(moveLeft ^ moveRight))
+            rb.AddForce(new Vector3(x_drag, 0, 0));
         
         // ********** JUMPING ********** //
         // "grounded": whether or not you've touched the ground since your last jump.
@@ -104,16 +74,19 @@ public class BetterPlayerMovement : MonoBehaviour {
         y_prev = y_curr;
         y_curr = this.transform.position.y;
         
-        if (Input.GetKey(KeyCode.Space) && grounded) {
-            Debug.Log("SPACE PRESSED");
-            this.GetComponent<Rigidbody>().AddForce(new Vector3(0, JUMP_POWER, 0), ForceMode.Impulse);
-            grounded = false;
+        if (grounded) {
+            if (moveJump) {
+                rb.AddForce(new Vector3(0, JUMP_POWER, 0), ForceMode.Impulse);
+                grounded = false;
+            }
+            else if (y_prev - y_curr > 0.5)
+                grounded = false;
         }
         
-        if ((y_prev == y_curr) && !grounded) 
-            grounded = true;
-        else if ((y_prev - y_curr > 0.5) && grounded) {
-            grounded = false;
+        if (!grounded) {
+            rb.AddForce(new Vector3(0, -GRAVITY, 0));
+            if (y_prev == y_curr)
+                grounded = true;
         }
     }
 }

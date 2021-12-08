@@ -210,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7042968114036614776, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: m_Drag
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7042968114036614777, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: jumpSpeed
@@ -301,8 +301,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 641c7f8fb5035a14eb889ee6ff4a9e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SPEED_CAP: 100
+  PLAYER_SPD: 25
   JUMP_POWER: 5
+  FRICTION: 0.5
 --- !u!1 &263194979
 GameObject:
   m_ObjectHideFlags: 0
