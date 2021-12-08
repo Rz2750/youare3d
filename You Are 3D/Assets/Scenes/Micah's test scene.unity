@@ -825,7 +825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerpositions: {fileID: 1050095108}
   player: {fileID: 1026332078}
-  exit: {fileID: 0}
+  exit: {fileID: 271946207}
 --- !u!4 &482392570
 Transform:
   m_ObjectHideFlags: 0
