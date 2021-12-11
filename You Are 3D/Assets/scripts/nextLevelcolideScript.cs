@@ -37,6 +37,12 @@
 //    }
 //}
 
+// transform.Rotate(new Vector3(0f, 100f, 0f) * Time.deltaTime);
+//scaleChange = new Vector3(40f, 40f, 40f) * Time.deltaTime;
+//cube.transform.localScale += scaleChange;
+//scaleChange2 = new Vector3(50f, 50f, 20f) * Time.deltaTime;
+//clinder.transform.localScale += scaleChange2;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -62,12 +68,12 @@ public class nextLevelcolideScript : MonoBehaviour
     {
         if (collided)
         {
+
             transform.Rotate(new Vector3(0f, 100f, 0f) * Time.deltaTime);
-            scaleChange = new Vector3(30f,30f,30f)* Time.deltaTime;
+            scaleChange = new Vector3(30f, 30f, 30f) * Time.deltaTime;
             cube.transform.localScale += scaleChange;
             scaleChange2 = new Vector3(40f, 40f, 5f) * Time.deltaTime;
             clinder.transform.localScale += scaleChange2;
-
 
 
         }
@@ -101,3 +107,6 @@ public class nextLevelcolideScript : MonoBehaviour
     }
 
 }
+
+
+
