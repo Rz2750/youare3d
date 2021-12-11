@@ -291,7 +291,7 @@ RectTransform:
   m_Children:
   - {fileID: 1672194643}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -482,6 +482,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &708147224 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4831979118014126349, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
+  m_PrefabInstance: {fileID: 9084891031133130642}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &912223878
 GameObject:
   m_ObjectHideFlags: 0
@@ -5740,6 +5751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 616903922}
+  volumeSlider: {fileID: 708147224}
 --- !u!4 &1383087744
 Transform:
   m_ObjectHideFlags: 0
@@ -6164,7 +6176,7 @@ RectTransform:
   - {fileID: 912223879}
   - {fileID: 1958598640}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6754,6 +6766,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrossFade(level Title)
       objectReference: {fileID: 0}
+    - target: {fileID: 3850574755304721243, guid: 0e110f77d3e454d4395d66d802b0deac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e110f77d3e454d4395d66d802b0deac, type: 3}
 --- !u!1001 &9084891031133130642
@@ -6763,9 +6779,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2273603329864140589, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5219874711385129894, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
       propertyPath: m_Name
       value: Canvas(pause)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5219874711385129894, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5219874711385129898, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
       propertyPath: m_Pivot.x
@@ -6855,5 +6879,9 @@ PrefabInstance:
       propertyPath: pauseButton
       value: 
       objectReference: {fileID: 2123226094}
+    - target: {fileID: 8612842928722458401, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
