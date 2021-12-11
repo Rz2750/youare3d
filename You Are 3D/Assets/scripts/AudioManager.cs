@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     public AudioSource _audioSource;
+    public Slider volumeSlider;
     private GameObject[] other;
     private bool NotFirst = false;
     private void Awake()
@@ -36,5 +38,10 @@ public class AudioManager : MonoBehaviour
     public void StopMusic()
     {
         _audioSource.Stop();
+    }
+    
+    void changeVolume(float sliderValue)
+    {
+        _audioSource.volume = sliderValue;
     }
 }
