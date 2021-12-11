@@ -46,9 +46,14 @@ using UnityEngine.SceneManagement;
 
 public class nextLevelcolideScript : MonoBehaviour
 {
-    //GameObject player;
     private Scene scene;
     private bool collided = false;
+    public GameObject cube;
+    public GameObject clinder;
+
+    private Vector3 scaleChange;
+    private Vector3 scaleChange2;
+
     void Start()
     {
         scene = SceneManager.GetActiveScene();
@@ -58,6 +63,12 @@ public class nextLevelcolideScript : MonoBehaviour
         if (collided)
         {
             transform.Rotate(new Vector3(0f, 100f, 0f) * Time.deltaTime);
+            scaleChange = new Vector3(40f,40f,40f)* Time.deltaTime;
+            cube.transform.localScale += scaleChange;
+            scaleChange2 = new Vector3(50f, 50f, 1f) * Time.deltaTime;
+            clinder.transform.localScale += scaleChange2;
+
+
 
         }
 
@@ -69,7 +80,7 @@ public class nextLevelcolideScript : MonoBehaviour
         {
             Debug.Log("rotate");
             collided = true;
-            yield return new WaitForSecondsRealtime(3f);
+            yield return new WaitForSecondsRealtime(3.5f);
 
       
             if (scene.name == "Level 0")
