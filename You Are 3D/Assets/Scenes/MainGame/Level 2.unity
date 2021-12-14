@@ -14,12 +14,12 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_Fog: 1
+  m_FogColor: {r: 0.46274513, g: 0.09411766, b: 0.2901961, a: 1}
+  m_FogMode: 1
   m_FogDensity: 0.01
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogStart: 8.5
+  m_LinearFogEnd: 10.5
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.46262687, g: 0.09410957, b: 0.2900235, a: 1}
+  m_IndirectSpecularColor: {r: 0.46262687, g: 0.09410957, b: 0.29002294, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 1aacf95ac2faad845a7dc8361f147856, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 48d6988af0fa6d143a8e44b9d13bfc17, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -955,7 +955,7 @@ PrefabInstance:
     - target: {fileID: 7042968114036614660, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e9ffc83dbd56b1b45be5c2d431434c28, type: 2}
+      objectReference: {fileID: 2100000, guid: 8886be18e299745b7aa7389c01a36502, type: 2}
     - target: {fileID: 7042968114036614662, guid: 38eeeee0a32cb4782a11c38fcfc75fa0, type: 3}
       propertyPath: m_Name
       value: Player
