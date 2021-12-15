@@ -7,16 +7,16 @@ public class QuitGameScript : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetKey("escape"))
-        {
-            QuitGame();
-        }
+        // if (Input.GetKey("escape"))
+        // {
+        //     QuitGame();
+        // }
     }
-    public void QuitGame()
-    {
-        #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-        #endif
-        Application.Quit();
-    }
+    // public void QuitGame()
+    // {
+    //     #if UNITY_EDITOR
+    //     UnityEditor.EditorApplication.isPlaying = false;
+    //     #endif
+    //     Application.Quit();
+    // }
 }

@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class pauseButtonClick : MonoBehaviour
 {
+    public void Update() {
+        if (Input.GetKey("escape"))
+        {
+            SceneManager.LoadScene("PauseMenu");
+        }
+    }
+    
     public void OnButtonPressed()
     {
         SceneManager.LoadScene("PauseMenu"); //change scene of next scene to link

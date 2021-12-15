@@ -499,7 +499,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2205967305743577529, guid: fb75c4bf900be419ba8274181dd7c723, type: 3}
       propertyPath: m_Name
-      value: PauseButtonManganger
+      value: PauseButtonManager
       objectReference: {fileID: 0}
     - target: {fileID: 2205967305743577531, guid: fb75c4bf900be419ba8274181dd7c723, type: 3}
       propertyPath: m_RootOrder
