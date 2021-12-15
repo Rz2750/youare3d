@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     public AudioSource _audioSource;
-    public Slider volumeSlider;
+    static public Slider volumeSlider;
     private GameObject[] other;
     private bool NotFirst = false;
     private void Awake()
@@ -38,7 +38,6 @@ public class AudioManager : MonoBehaviour
     public void StopMusic()
     {
         _audioSource.Stop();
-        Destroy(gameObject);
     }
     
     void changeVolume(float sliderValue)
