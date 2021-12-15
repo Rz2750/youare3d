@@ -1101,6 +1101,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnRestartPress
       objectReference: {fileID: 0}
+    - target: {fileID: 7887187137071082028, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: exit
+      value: 
+      objectReference: {fileID: 2077736745}
+    - target: {fileID: 7887187137071082028, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2146834828}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
 --- !u!114 &1802912862 stripped
@@ -1114,6 +1122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2077736745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6972369535718262696, guid: 6136fe542dfcc43db8c3989e5b4a9ee0, type: 3}
+  m_PrefabInstance: {fileID: 900647914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2082256912
 PrefabInstance:
   m_ObjectHideFlags: 0
