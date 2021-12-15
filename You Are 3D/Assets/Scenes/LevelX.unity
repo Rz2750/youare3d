@@ -975,6 +975,30 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 510952178602730100, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 510952178602730100, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1665711772}
+    - target: {fileID: 510952178602730100, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 510952178602730100, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 510952178602730100, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 510952178602730100, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 510952179673981798, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1068,12 +1092,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 510952179973917186, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 510952179973917186, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 510952179973917186, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3760385456723485625, guid: 70d776e65489f4561a5ed6ac1f82d117, type: 3}
     - target: {fileID: 510952179973917186, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1665711772}
+    - target: {fileID: 510952179973917186, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 510952179973917186, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnRestartPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 510952179973917186, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StopMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 510952179973917186, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 510952179973917186, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7887187137071082028, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
       propertyPath: exit
