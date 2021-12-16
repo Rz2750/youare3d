@@ -40,7 +40,7 @@ public class AudioManager : MonoBehaviour
         _audioSource.Stop();
     }
     
-    void changeVolume(float sliderValue)
+    public void changeVolume(float sliderValue)
     {
         _audioSource.volume = sliderValue;
     }
