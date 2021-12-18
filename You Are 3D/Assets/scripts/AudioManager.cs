@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
     public AudioSource _audioSource;
     static public Slider volumeSlider;
+    public AudioMixer mixer;
+    public static float volumeLevel;
     private GameObject[] other;
     private bool NotFirst = false;
     private void Awake()
@@ -26,7 +29,7 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(transform.gameObject);
-        _audioSource = GetComponent<AudioSource>();
+        //_audioSource = GetComponent<AudioSource>();
     }
 
     public void PlayMusic()
@@ -40,8 +43,9 @@ public class AudioManager : MonoBehaviour
         _audioSource.Stop();
     }
     
-    public void changeVolume(float sliderValue)
+    public void SetLevel(float sliderValue)
     {
-        _audioSource.volume = sliderValue;
+        mixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
+        volumeLevel = sliderValue;
     }
 }

@@ -887,7 +887,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3573974048207777545}
   - component: {fileID: 4831979118014126349}
-  - component: {fileID: 157658937138084917}
   m_Layer: 5
   m_Name: Volume
   m_TagString: Untagged
@@ -964,23 +963,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &157658937138084917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5233183545998373574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 666bd6f50f1104df3990852010eb0395, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixer: {fileID: 0}
+      m_Calls:
+      - m_Target: {fileID: 5281051030681797703, guid: 47a43e0c1d48245c3a5117bb111e33c4, type: 3}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: SetLevel
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5784672441050213897
 GameObject:
   m_ObjectHideFlags: 0

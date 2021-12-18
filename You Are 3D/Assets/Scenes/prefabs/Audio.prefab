@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5281051030681797816}
   - component: {fileID: 5281051030681797702}
   - component: {fileID: 5281051030681797703}
-  - component: {fileID: 472475033626729263}
   m_Layer: 0
   m_Name: Audio
   m_TagString: music
@@ -141,17 +140,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7041aad8d1674890b670775e1f923f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioSource: {fileID: 0}
---- !u!114 &472475033626729263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5281051030681797701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 666bd6f50f1104df3990852010eb0395, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixer: {fileID: 0}
+  _audioSource: {fileID: 5281051030681797702}
+  mixer: {fileID: 24100000, guid: 45ca7f9167eeb44569983ffae36becfe, type: 2}

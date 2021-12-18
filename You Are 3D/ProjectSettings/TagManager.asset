@@ -9,6 +9,7 @@ TagManager:
   - key
   - Door
   - music
+  - Volume
   layers:
   - Default
   - TransparentFX
