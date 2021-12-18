@@ -578,7 +578,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 0}
-  volumeSlider: {fileID: 0}
 --- !u!82 &1178939251
 AudioSource:
   m_ObjectHideFlags: 0
@@ -905,7 +904,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 2f447c726a55dfe4b884d7d6de600b87, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b43bcffaeb735444296dc36ede2d5608, type: 2}
+      objectReference: {fileID: 2100000, guid: f95dea7f5ff2d46309110af45acb99b2, type: 2}
     - target: {fileID: 919132149155446097, guid: 2f447c726a55dfe4b884d7d6de600b87, type: 3}
       propertyPath: m_Name
       value: YouAre3DLevel2
