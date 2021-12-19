@@ -16,13 +16,14 @@ public class BetterPlayerMovement : MonoBehaviour {
     private int grounded = 5;
     private float y_prev = 0.0f;
     private float y_curr = 0.0f;
+    private bool enabled = false;
     
     // Start is called before the first frame update
     void Start() {
         y_prev = this.transform.position.y;
         y_curr = this.transform.position.y;
         
-        StartCoroutine(StartGravityPause());
+        StartCoroutine(StartPause());
     }
 
     // Update is called once per frame
@@ -41,13 +42,13 @@ public class BetterPlayerMovement : MonoBehaviour {
         bool moveJump = (Input.GetKey(KeyCode.Space));
         
         // ********** MOVEMENT ********** //
-        if (moveFwd)
+        if (moveFwd && enabled)
             rb.AddForce(new Vector3(0, 0, PLAYER_SPD));
-        if (moveBack)
+        if (moveBack && enabled)
             rb.AddForce(new Vector3(0, 0, -PLAYER_SPD));
-        if (moveRight)
+        if (moveRight && enabled)
             rb.AddForce(new Vector3(PLAYER_SPD, 0, 0));
-        if (moveLeft)
+        if (moveLeft && enabled)
             rb.AddForce(new Vector3(-PLAYER_SPD, 0, 0));
         
         // ********** DRAG ********** //
@@ -55,6 +56,8 @@ public class BetterPlayerMovement : MonoBehaviour {
         float x_drag = -FRICTION*PLAYER_SPD*rb.velocity.x;
         float z_drag = -FRICTION*PLAYER_SPD*rb.velocity.z;
         if (DEBUG_MODE) Debug.Log("DRAG: " + x_drag + ", " + z_drag);
+        // drag applies if the player isn't moving (or if they're moving in both directions at once)
+        // and is what slows them quickly to a stop when they let go of the keys.
         if (!(moveFwd ^ moveBack))
             rb.AddForce(new Vector3(0, 0, z_drag));
         if (!(moveLeft ^ moveRight))
@@ -85,14 +88,15 @@ public class BetterPlayerMovement : MonoBehaviour {
         if (DEBUG_MODE) Debug.Log("FRAMES UNTIL GROUNDED: " + grounded + "; y_curr = " + y_curr + ", y_prev = " + y_prev);
     }
     
-    // Coroutine that halts the effects of gravity for the first 3 seconds
+    // Coroutine that halts the effects of movement for the first 2 seconds
     // that a level is loaded
-    IEnumerator StartGravityPause() {
+    IEnumerator StartPause() {
         float gravity_actual = GRAVITY;
         GRAVITY = 0.0f;
         this.GetComponent<Rigidbody>().useGravity = false;
         yield return new WaitForSeconds(2);
         GRAVITY = gravity_actual;
         this.GetComponent<Rigidbody>().useGravity = true;
+        enabled = true;
     }
 }
