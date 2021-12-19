@@ -21,6 +21,8 @@ public class BetterPlayerMovement : MonoBehaviour {
     void Start() {
         y_prev = this.transform.position.y;
         y_curr = this.transform.position.y;
+        
+        StartCoroutine(StartGravityPause());
     }
 
     // Update is called once per frame
@@ -81,5 +83,14 @@ public class BetterPlayerMovement : MonoBehaviour {
             }
         }
         if (DEBUG_MODE) Debug.Log("FRAMES UNTIL GROUNDED: " + grounded + "; y_curr = " + y_curr + ", y_prev = " + y_prev);
+    }
+    
+    // Coroutine that halts the effects of gravity for the first 3 seconds
+    // that a level is loaded
+    IEnumerator StartGravityPause() {
+        float gravity_actual = GRAVITY;
+        GRAVITY = 0.0f;
+        yield return new WaitForSeconds(3);
+        GRAVITY = gravity_actual;
     }
 }
