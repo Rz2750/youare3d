@@ -75,7 +75,10 @@ public class BetterPlayerMovement : MonoBehaviour {
                 rb.AddForce(new Vector3(0, JUMP_POWER, 0), ForceMode.Impulse);
                 grounded = 5;
             }
-            else if (y_prev - y_curr > 0.5)
+            else if (y_prev - y_curr > 0.05)
+                // you lose 'grounded' status if you fall more than 0.05m in one physics update.
+                // this is enough to give a bit of leniency, so you can still jump for a few moments
+                // even after leaving a platform.
                 grounded = 5;
         }
         
