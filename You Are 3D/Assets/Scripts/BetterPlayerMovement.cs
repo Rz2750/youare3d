@@ -90,7 +90,9 @@ public class BetterPlayerMovement : MonoBehaviour {
     IEnumerator StartGravityPause() {
         float gravity_actual = GRAVITY;
         GRAVITY = 0.0f;
-        yield return new WaitForSeconds(3);
+        this.GetComponent<Rigidbody>().useGravity = false;
+        yield return new WaitForSeconds(2);
         GRAVITY = gravity_actual;
+        this.GetComponent<Rigidbody>().useGravity = true;
     }
 }
