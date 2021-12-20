@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.905748, g: 0.8940217, b: 0.4077315, a: 1}
+  m_IndirectSpecularColor: {r: 0.90574807, g: 0.89402175, b: 0.40773177, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -593,6 +593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseButtonManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2205967305743577529, guid: fb75c4bf900be419ba8274181dd7c723, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2205967305743577531, guid: fb75c4bf900be419ba8274181dd7c723, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -815,7 +819,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2273603329864140589, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5219874711385129894, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
       propertyPath: m_Name
@@ -823,7 +827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5219874711385129894, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5219874711385129898, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
       propertyPath: m_Pivot.x
@@ -915,7 +919,7 @@ PrefabInstance:
       objectReference: {fileID: 421759324}
     - target: {fileID: 8612842928722458401, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}

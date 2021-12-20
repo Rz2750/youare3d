@@ -94,7 +94,7 @@ public class pauseMenu : MonoBehaviour
     //public Button resetButton;
     //public Button resumeButton;
     //public Button menuButton;
-
+    private bool buttonPaused = false;
 
 
 
@@ -113,20 +113,21 @@ public class pauseMenu : MonoBehaviour
         Button btn = pauseButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
 
-        if (GameisPaused == false)
-        {
+        if (Input.GetKeyDown(KeyCode.Escape) || buttonPaused){
+          if (GameisPaused && !buttonPaused){
             Resume();
-        } else
-        {
-            Pause();
-        }
+          }
+          else{
+                Pause();
+          }
+          }
 
-        
+
     }
 
    void TaskOnClick()
     {
-        GameisPaused = true;
+      buttonPaused = true;
 
     }
 
@@ -142,6 +143,7 @@ public class pauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameisPaused = false;
+        buttonPaused = false;
     }
 
     public void Quit()
