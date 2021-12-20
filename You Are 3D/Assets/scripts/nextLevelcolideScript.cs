@@ -95,19 +95,23 @@ public class nextLevelcolideScript : MonoBehaviour
             }
             else if (scene.name == "Level 1")
             {
-                SceneManager.LoadScene("LevelY");
-            }
-            else if (scene.name == "LevelY")
-            {
                 SceneManager.LoadScene("Level 2");
             }
             else if (scene.name == "Level 2")
             {
-                SceneManager.LoadScene("Level3");
+                SceneManager.LoadScene("Level 3");
             }
-            else if (scene.name == "LevelX")
+            else if (scene.name == "Level 3")
             {
-                SceneManager.LoadScene("LevelZ");
+                SceneManager.LoadScene("Level 4");
+            }
+            else if (scene.name == "Level 4")
+            {
+                SceneManager.LoadScene("Level 5");
+            }
+            else if (scene.name == "Level 5")
+            {
+                SceneManager.LoadScene("Level 6");
             }
             else
             {
