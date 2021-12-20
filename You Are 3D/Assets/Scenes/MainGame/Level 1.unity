@@ -425,10 +425,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5219874711385129899, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
-      propertyPath: pauseButton
-      value: 
-      objectReference: {fileID: 1802912862}
     - target: {fileID: 8612842928722458401, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1127,17 +1123,6 @@ PrefabInstance:
       objectReference: {fileID: 2146834828}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
---- !u!114 &1802912862 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 510952178602730100, guid: c0e08f0fcd2e34931b90ee05924974a0, type: 3}
-  m_PrefabInstance: {fileID: 1802912861}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2077736745 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6972369535718262696, guid: 6136fe542dfcc43db8c3989e5b4a9ee0, type: 3}

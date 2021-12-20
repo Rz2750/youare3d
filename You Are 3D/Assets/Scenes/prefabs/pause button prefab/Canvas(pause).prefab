@@ -614,13 +614,13 @@ MonoBehaviour:
           m_StringArgument: Restart()
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5281051030681797703, guid: 47a43e0c1d48245c3a5117bb111e33c4, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: StopMusic
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: pauseMenu, Assembly-CSharp
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -960,7 +960,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 2273603329864140589}
   m_HandleRect: {fileID: 8612842928722458401}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 1
@@ -970,12 +970,12 @@ MonoBehaviour:
       - m_Target: {fileID: 5281051030681797703, guid: 47a43e0c1d48245c3a5117bb111e33c4, type: 3}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: SetLevel
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

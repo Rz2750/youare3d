@@ -43,8 +43,7 @@ public class AudioManager : MonoBehaviour
         _audioSource.Stop();
     }
     
-    public void SetLevel(float sliderValue)
-    {
+    public void SetLevel(float sliderValue) {
         mixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
         volumeLevel = sliderValue;
     }
