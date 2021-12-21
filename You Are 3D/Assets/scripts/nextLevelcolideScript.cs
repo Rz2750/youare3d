@@ -113,6 +113,10 @@ public class nextLevelcolideScript : MonoBehaviour
             {
                 SceneManager.LoadScene("Level 6");
             }
+            else if (scene.name == "Level 6")
+            {
+                SceneManager.LoadScene("Level 7");
+            }
             else
             {
                 SceneManager.LoadScene("Micah's test scene"); //change to title of next scene to link
