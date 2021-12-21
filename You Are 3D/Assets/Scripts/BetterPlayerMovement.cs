@@ -16,7 +16,7 @@ public class BetterPlayerMovement : MonoBehaviour {
     private int grounded = 5;
     private float y_prev = 0.0f;
     private float y_curr = 0.0f;
-    private bool enabled = false;
+    private bool canMove = false;
     
     // Start is called before the first frame update
     void Start() {
@@ -42,13 +42,13 @@ public class BetterPlayerMovement : MonoBehaviour {
         bool moveJump = (Input.GetKey(KeyCode.Space));
         
         // ********** MOVEMENT ********** //
-        if (moveFwd && enabled)
+        if (moveFwd && canMove)
             rb.AddForce(new Vector3(0, 0, PLAYER_SPD));
-        if (moveBack && enabled)
+        if (moveBack && canMove)
             rb.AddForce(new Vector3(0, 0, -PLAYER_SPD));
-        if (moveRight && enabled)
+        if (moveRight && canMove)
             rb.AddForce(new Vector3(PLAYER_SPD, 0, 0));
-        if (moveLeft && enabled)
+        if (moveLeft && canMove)
             rb.AddForce(new Vector3(-PLAYER_SPD, 0, 0));
         
         // ********** DRAG ********** //
@@ -84,7 +84,7 @@ public class BetterPlayerMovement : MonoBehaviour {
         
         if (grounded != 0) {
             rb.AddForce(new Vector3(0, -GRAVITY, 0));
-            if (Math.Abs(y_prev - y_curr) <= 0.0001 && grounded > 0 && enabled) {
+            if (Math.Abs(y_prev - y_curr) <= 0.0001 && grounded > 0 && canMove) {
                 grounded--;
             }
         }
@@ -100,6 +100,6 @@ public class BetterPlayerMovement : MonoBehaviour {
         yield return new WaitForSeconds(2);
         GRAVITY = gravity_actual;
         this.GetComponent<Rigidbody>().useGravity = true;
-        enabled = true;
+        canMove = true;
     }
 }
