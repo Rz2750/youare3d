@@ -17,7 +17,7 @@ public class BetterPlayerMovement : MonoBehaviour {
     private float y_prev = 0.0f;
     private float y_curr = 0.0f;
     private bool canMove = false;
-    private bool hasKey = false;
+    public bool hasKey = false;
     
     // Start is called before the first frame update
     void Start() {

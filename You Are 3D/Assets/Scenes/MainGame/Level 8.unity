@@ -716,8 +716,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2872585364264802549, guid: a0e072ceadd40f84c8fba42aee34e6c8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4366120822475626952, guid: a0e072ceadd40f84c8fba42aee34e6c8, type: 3}
       propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366120822475626952, guid: a0e072ceadd40f84c8fba42aee34e6c8, type: 3}
+      propertyPath: m_TagString
       value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 4449553139531182895, guid: a0e072ceadd40f84c8fba42aee34e6c8, type: 3}
@@ -776,8 +784,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7332531040157690878, guid: a0e072ceadd40f84c8fba42aee34e6c8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484021973846998683, guid: a0e072ceadd40f84c8fba42aee34e6c8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8736678575147361356, guid: a0e072ceadd40f84c8fba42aee34e6c8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972215860990775161, guid: a0e072ceadd40f84c8fba42aee34e6c8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0e072ceadd40f84c8fba42aee34e6c8, type: 3}
+--- !u!1 &976444978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4366120822475626952, guid: a0e072ceadd40f84c8fba42aee34e6c8, type: 3}
+  m_PrefabInstance: {fileID: 898015211}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &976444979
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976444978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8608938, y: 14.873757, z: 6.7031507}
+  m_Center: {x: -0.4304445, y: 1.0916567, z: -2.851573}
 --- !u!1 &1206452351
 GameObject:
   m_ObjectHideFlags: 0
