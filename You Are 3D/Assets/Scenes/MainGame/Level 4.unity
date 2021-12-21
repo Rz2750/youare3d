@@ -223,6 +223,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1148461119817550886, guid: 6136fe542dfcc43db8c3989e5b4a9ee0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e5f87b5eaf0e4ab0b9e9512e5302f2d, type: 2}
+    - target: {fileID: 5981905531020930102, guid: 6136fe542dfcc43db8c3989e5b4a9ee0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e5f87b5eaf0e4ab0b9e9512e5302f2d, type: 2}
     - target: {fileID: 6972369535718262696, guid: 6136fe542dfcc43db8c3989e5b4a9ee0, type: 3}
       propertyPath: m_Name
       value: flag Variant
@@ -800,6 +808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas(pause)
       objectReference: {fileID: 0}
+    - target: {fileID: 5219874711385129894, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5219874711385129898, guid: a7d914d8dcf2249a88c8b724b85b7477, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1132,6 +1144,10 @@ PrefabInstance:
     - target: {fileID: 3850574755304721243, guid: 0e110f77d3e454d4395d66d802b0deac, type: 3}
       propertyPath: m_Name
       value: CrossFade(level Title)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3850574755304721243, guid: 0e110f77d3e454d4395d66d802b0deac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3850574755737386660, guid: 0e110f77d3e454d4395d66d802b0deac, type: 3}
       propertyPath: m_Sprite
