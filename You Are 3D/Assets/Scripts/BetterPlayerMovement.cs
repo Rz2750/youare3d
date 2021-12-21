@@ -104,14 +104,14 @@ public class BetterPlayerMovement : MonoBehaviour {
         canMove = true;
     }
 
-    private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.tag == "key") {
-            hasKey = true;
-            Destroy (collision.gameObject);
-        }
-        else if ((collision.gameObject.tag == "Door") and (hasKey == true)) {
-            hasKey = false;
-            Destroy (collision.gameObject);
-        }
-    }
+    // private void OnCollisionEnter(Collision collision) {
+    //     if (collision.gameObject.tag == "key") {
+    //         hasKey = true;
+    //         Destroy (collision.gameObject);
+    //     }
+    //     else if ((collision.gameObject.tag == "Door") and (hasKey == true)) {
+    //         hasKey = false;
+    //         Destroy (collision.gameObject);
+    //     }
+    // }
 }
