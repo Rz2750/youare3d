@@ -84,7 +84,7 @@ public class BetterPlayerMovement : MonoBehaviour {
         
         if (grounded != 0) {
             rb.AddForce(new Vector3(0, -GRAVITY, 0));
-            if (Math.Abs(y_prev - y_curr) <= 0.0001 && grounded > 0) {
+            if (Math.Abs(y_prev - y_curr) <= 0.0001 && grounded > 0 && enabled) {
                 grounded--;
             }
         }
