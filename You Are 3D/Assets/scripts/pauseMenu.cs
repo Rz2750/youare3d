@@ -113,8 +113,8 @@ public class pauseMenu : MonoBehaviour
         Button btn = pauseButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
 
-        if (Input.GetKeyDown(KeyCode.Escape) || buttonPaused){
-            if (GameisPaused && !buttonPaused) {
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            if (GameisPaused) {
                 Resume();
             }
             else {
@@ -127,7 +127,7 @@ public class pauseMenu : MonoBehaviour
 
     void TaskOnClick()
     {
-        buttonPaused = true;
+        Pause();
     }
 
     public void Pause()
