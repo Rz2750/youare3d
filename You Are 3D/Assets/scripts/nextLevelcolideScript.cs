@@ -59,15 +59,18 @@ public class nextLevelcolideScript : MonoBehaviour
 
     private Vector3 scaleChange;
     private Vector3 scaleChange2;
+    public ParticleSystem _psystem;
 
     void Start()
     {
         scene = SceneManager.GetActiveScene();
+        _psystem.Stop();
     }
     void Update()
     {
         if (collided)
         {
+            _psystem.Play();
 
             transform.Rotate(new Vector3(0f, 100f, 0f) * Time.deltaTime);
             scaleChange = new Vector3(30f, 30f, 30f) * Time.deltaTime;
