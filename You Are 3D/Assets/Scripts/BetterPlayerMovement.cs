@@ -109,7 +109,7 @@ public class BetterPlayerMovement : MonoBehaviour {
             hasKey = true;
             Destroy (collision.gameObject);
         }
-        else if ((collision.gameObject.tag == "Door") and (hasKey == true)) {
+        else if ((collision.gameObject.tag == "Door") && (hasKey == true)) {
             hasKey = false;
             Destroy (collision.gameObject);
         }
