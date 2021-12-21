@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 
 // Richard's WIP better movement script
@@ -17,7 +18,7 @@ public class BetterPlayerMovement : MonoBehaviour {
     private float y_prev = 0.0f;
     private float y_curr = 0.0f;
     private bool canMove = false;
-    public bool hasKey = false;
+    private bool hasKey = false;
     
     // Start is called before the first frame update
     void Start() {
@@ -112,6 +113,9 @@ public class BetterPlayerMovement : MonoBehaviour {
         else if ((collision.gameObject.tag == "Door") && (hasKey == true)) {
             hasKey = false;
             Destroy (collision.gameObject);
+        }
+        else if ((collision.gameObject.tag == "FinalExit")) {
+            SceneManager.LoadScene("The End");
         }
     }
 }
