@@ -50,7 +50,7 @@ using UnityEngine.SceneManagement;
 
 
 
-public class nextLevelcolideScript : MonoBehaviour
+public class NextLevelCollideScript : MonoBehaviour
 {
     private Scene scene;
     private bool collided = false;
@@ -120,9 +120,16 @@ public class nextLevelcolideScript : MonoBehaviour
             {
                 SceneManager.LoadScene("Level 7");
             }
-            else
+            else if (scene.name == "Level 7")
             {
-                SceneManager.LoadScene("Micah's test scene"); //change to title of next scene to link
+                SceneManager.LoadScene("Level 8");
+            }
+            else if (scene.name == "Level 8")
+            {
+                // REMOVE THE FAKE WALL IN LEVEL 8
+            }
+            else {
+                Debug.Log("No level to load! Should never see this message.");
             }
         }
 
