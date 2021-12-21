@@ -285,6 +285,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1148461119817550886, guid: 6136fe542dfcc43db8c3989e5b4a9ee0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f481603b12af1491f90ee2213f010ac4, type: 2}
+    - target: {fileID: 5981905531020930102, guid: 6136fe542dfcc43db8c3989e5b4a9ee0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f481603b12af1491f90ee2213f010ac4, type: 2}
     - target: {fileID: 6972369535718262696, guid: 6136fe542dfcc43db8c3989e5b4a9ee0, type: 3}
       propertyPath: m_Name
       value: flag Variant
