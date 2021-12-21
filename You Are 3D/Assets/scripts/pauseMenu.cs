@@ -114,21 +114,20 @@ public class pauseMenu : MonoBehaviour
         btn.onClick.AddListener(TaskOnClick);
 
         if (Input.GetKeyDown(KeyCode.Escape) || buttonPaused){
-          if (GameisPaused && !buttonPaused){
-            Resume();
-          }
-          else{
+            if (GameisPaused && !buttonPaused) {
+                Resume();
+            }
+            else {
                 Pause();
-          }
-          }
+            }
+        }
 
 
     }
 
-   void TaskOnClick()
+    void TaskOnClick()
     {
-      buttonPaused = true;
-
+        buttonPaused = true;
     }
 
     public void Pause()
@@ -158,6 +157,7 @@ public class pauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         GameisPaused = false;
+        buttonPaused = false;
 
         //restart the game:
         //SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
