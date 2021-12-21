@@ -17,6 +17,7 @@ public class BetterPlayerMovement : MonoBehaviour {
     private float y_prev = 0.0f;
     private float y_curr = 0.0f;
     private bool canMove = false;
+    private bool hasKey = false;
     
     // Start is called before the first frame update
     void Start() {
@@ -101,5 +102,16 @@ public class BetterPlayerMovement : MonoBehaviour {
         GRAVITY = gravity_actual;
         this.GetComponent<Rigidbody>().useGravity = true;
         canMove = true;
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.tag == "key") {
+            hasKey = true;
+            Destroy (collision.gameObject);
+        }
+        else if ((collision.gameObject.tag == "Door") and (hasKey == true)) {
+            hasKey = false;
+            Destroy (collision.gameObject);
+        }
     }
 }
